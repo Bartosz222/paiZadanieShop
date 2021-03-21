@@ -16,36 +16,36 @@ img {
 .container {
     display: flex;
 }
-.first_one {
+.first{
     display: flex;
     flex: 1;
     margin-right: 10px;
 }
-.text_on_the_photos_turned {
+.textPhotos{
     position: relative;
     z-index: 10;
     display: inline-block;
 }
-.text_on_the_photos_turned h2 span{
+.textPhotos h2 span{
     position: absolute;
     left: -10px;
     transform: rotate(-90deg);
     bottom: 60px;
 }
-.rightside   {
+.others{
     display: flex;
     flex-direction: column;
     flex: 1;
     margin-left: 10px;
 }
-.all_down {
+.bot{
     display: flex;
 }
-.all_the_photos {
+.images{
     margin: 0 10px;
     filter: grayscale(0) blur(0);
 }
-.text_on_the_photos_turned h2 span::after {
+.textPhotos h2 span::after {
     content: '';
     width: 30px;
     height: 0.5px;
@@ -56,7 +56,7 @@ img {
     background-color: red;
     
 }
-.all_the_photos:hover img {
+.images:hover img {
     transform: 2s;
     filter: grayscale(100%) blur(3px);
 }
