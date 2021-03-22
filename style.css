@@ -15,6 +15,7 @@ img {
 }
 .container {
     display: flex;
+    flex-direction: column;
 }
 .first{
     display: flex;
@@ -59,4 +60,104 @@ img {
 .images:hover img {
     transform: 2s;
     filter: grayscale(100%) blur(3px);
+}
+.slider{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 50px auto;
+}
+.slider h1::before {
+    display: block;
+    height: 1px;
+    width: 30px;
+    content: '';
+    margin: 20px auto;
+    background-color: red;
+}
+.slider h1{
+    font-size: 42px;
+}
+.slide{
+    display: flex;
+    flex: 1;
+}
+.inside{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.inside h3 {
+    color: rgb(22, 22, 22);
+    margin: 0 ;
+}
+.inside h3:hover {
+    color: rgb(187, 54, 21);
+}
+.pictures {
+    position: relative;
+    display: flex;
+}
+.onThePicture {
+    content: '';
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.onThePicture:hover {
+    opacity: .4;
+}
+.hoverElement{
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 29;
+}
+.onThePicture:hover + .hoverElement{  
+    display: inline-block;
+}
+.insideHoverElement{
+    float: left;
+}
+.clothType{
+    color: rgb(114, 114, 114);
+    font-size: 11px;
+    margin: 20px 0 10px 0 ;
+}
+.clothType:hover{
+    color: rgb(131, 36, 12);
+}
+.insideHoverElement img{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, 50%);
+    z-index: 27;
+}
+.money {
+    color: rgb(167, 46, 16);
+    font-weight: 700;
+    margin: 10px 0;
+}
+.insideHoverElement2{ 
+    margin: 0 5px;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-bottom-color: rgb(102, 16, 5);
+    position: relative;
+    top: -22px;
+    opacity: 1;
+    z-index: 26;
 }
